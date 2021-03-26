@@ -1,0 +1,26 @@
+1616799412681	geckodriver	INFO	Listening on 127.0.0.1:52540
+1616799415846	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\ojuar\\AppData\\Local\\Temp\\rust_mozprofileKrJpgk"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1616799424882	Marionette	INFO	Listening on port 52552
+1616799425167	Marionette	WARN	TLS certificate errors will be ignored for this session
+1616799425244	Marionette	ERROR	[15] No reply from Marionette:Register
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+JavaScript error: https://521a52999ba2bdec19ec3c46c41be0c5.safeframe.googlesyndication.com/safeframe/1-0-38/html/container.html line 5 > injectedScript, line 33: TypeError: window.dataLayer is undefined
+JavaScript error: https://521a52999ba2bdec19ec3c46c41be0c5.safeframe.googlesyndication.com/safeframe/1-0-38/html/container.html line 5 > injectedScript, line 33: TypeError: window.dataLayer is undefined
+1616799507803	Marionette	INFO	Stopped listening on port 52552
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 716: Error: Phase "Sqlite.jsm: wait until all connections are closed" is finished, it is too late to register completion condition "protections.sqlite#0: waiting for shutdown"
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1616799951835	geckodriver	INFO	Listening on 127.0.0.1:53043
+1616799954809	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\ojuar\\AppData\\Local\\Temp\\rust_mozprofileT3BkuR"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1616799960485	Marionette	INFO	Listening on port 53052
+1616799960684	Marionette	WARN	TLS certificate errors will be ignored for this session
+1616799960704	Marionette	ERROR	[15] No reply from Marionette:Register
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1616800032227	Marionette	INFO	Stopped listening on port 53052
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 716: Error: Phase "Sqlite.jsm: wait until all connections are closed" is finished, it is too late to register completion condition "protections.sqlite#0: waiting for shutdown"
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
