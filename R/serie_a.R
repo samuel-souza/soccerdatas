@@ -5,20 +5,23 @@
 #' @return two tables with the matches played and future matches
 #' @export serie_a
 #'
+#' @importFrom "reticulate" "py_run_file"
+#' @importFrom "utils" "install.packages" "installed.packages" "read.csv"
 #' @examples
 #' serie_a()
 
 
 serie_a = function() {
-  if ('reticulate' %in% rownames(installed.packages())){
-  reticulate::py_run_file('Python/ScrapingGE_A.py')
+
+  if ('reticulate' %in% rownames(utils::installed.packages())){
+  reticulate::py_run_file('./inst/python/ScrapingGE_A.py')
   } else {
-    install.packages('reticulate')
-  reticulate::py_run_file('Python/ScrapingGE_A.py')
+    utils::install.packages('reticulate')
+  reticulate::py_run_file('./inst/python/ScrapingGE_A.py')
   }
 
-  database <<- utils::read.csv('dtbase.csv')
-  future_matches <<- utils::read.csv('fmatches.csv')
+  .GlobalEnv$database = utils::read.csv('dtbase.csv')
+  .GlobalEnv$future_matches = utils::read.csv('fmatches.csv')
   file.remove(c('dtbase.csv','fmatches.csv'))
 }
 
