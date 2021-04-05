@@ -6111,3 +6111,14 @@ JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 716: Error: Pha
 
 ###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
 
+1617636511798	geckodriver	INFO	Listening on 127.0.0.1:57512
+1617636514850	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\ojuar\\AppData\\Local\\Temp\\rust_mozprofilemRoBwI"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1617636537322	Marionette	INFO	Listening on port 57523
+1617636537981	Marionette	WARN	TLS certificate errors will be ignored for this session
+1617636538020	Marionette	ERROR	[15] No reply from Marionette:Register
+1617636626142	Marionette	INFO	Stopped listening on port 57523
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
