@@ -14,10 +14,10 @@
 serie_a = function() {
 
   if ('reticulate' %in% rownames(utils::installed.packages())){
-  reticulate::py_run_file('./inst/python/ScrapingGE_A.py')
+  reticulate::py_run_file('./python/ScrapingGE_A.py')
   } else {
     utils::install.packages('reticulate')
-  reticulate::py_run_file('./inst/python/ScrapingGE_A.py')
+  reticulate::py_run_file('./python/ScrapingGE_A.py')
   }
 
   .GlobalEnv$database = utils::read.csv('dtbase.csv')
