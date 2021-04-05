@@ -1,1 +1,1 @@
-Sys.setenv(RETICULATE_PYTHON = "./.env/Scripts")
+Sys.setenv(RETICULATE_PYTHON = "./inst/python/env/Scripts")
