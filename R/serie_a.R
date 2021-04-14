@@ -11,12 +11,15 @@
 #' serie_a()
 
 
-serie_a = function() {
+serie_a = function(a = urltools::path.package('soccerdatas')) {
+
+  setwd(a)
+
   if ('reticulate' %in% rownames(utils::installed.packages())){
-  reticulate::py_run_file('scrapingGE_A.py')
+  reticulate::py_run_file('python/scrapingGE_A.py')
   } else {
     utils::install.packages('reticulate')
-  reticulate::py_run_file('scrapingGE_A.py')
+  reticulate::py_run_file('python/scrapingGE_A.py')
   }
 
   .GlobalEnv$database = utils::read.csv('dtbase.csv')
