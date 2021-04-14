@@ -11,9 +11,12 @@
 #' serie_a()
 
 
-serie_a = function(a = urltools::path.package('soccerdatas')) {
+serie_a = function() {
 
-  setwd(a)
+  if (as.character(getwd()) != as.character(path.packages('soccerdatas'))){
+    a = path.packages('soccerdatas')
+    setwd(a)
+  }
 
   if ('reticulate' %in% rownames(utils::installed.packages())){
   reticulate::py_run_file('python/scrapingGE_A.py')

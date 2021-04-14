@@ -4,7 +4,7 @@
 \alias{serie_a}
 \title{Web scraping of serie a}
 \usage{
-serie_a(a = urltools::path.package("soccerdatas"))
+serie_a()
 }
 \value{
 two tables with the matches played and future matches
