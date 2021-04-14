@@ -13,8 +13,8 @@
 
 serie_a = function() {
 
-  if (as.character(getwd()) != as.character(path.packages('soccerdatas'))){
-    a = path.packages('soccerdatas')
+  if (as.character(getwd()) != as.character(path.package('soccerdatas'))){
+    a = path.package('soccerdatas')
     setwd(a)
   }
 
