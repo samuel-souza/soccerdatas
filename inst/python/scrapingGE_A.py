@@ -1,12 +1,17 @@
-from selenium.webdriver import Firefox
+from selenium import webdriver
 from time import sleep 
 import pandas as pd 
 import numpy as np
+import os 
+
 
 url = 'https://globoesporte.globo.com/futebol/brasileirao-serie-a/'
-driver = './python/geckodriver'
-browser = Firefox(driver)
+driver = './python'
+dir(driver)
+browser = webdriver.Firefox()
 browser.get(url)
+
+browser.maximize_window()
 
 m = browser.find_element_by_tag_name('main')
 r = m.find_element_by_class_name('lista-jogos__navegacao--rodada')
