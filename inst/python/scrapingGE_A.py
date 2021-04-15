@@ -4,8 +4,8 @@ import pandas as pd
 import numpy as np
 
 url = 'https://globoesporte.globo.com/futebol/brasileirao-serie-a/'
-
-browser = Firefox()
+driver = 'python/geckodriver'
+browser = Firefox(driver)
 browser.get(url)
 
 m = browser.find_element_by_tag_name('main')
