@@ -17,7 +17,10 @@ serie_a = function() {
     setwd(a)
   }
 
-  reticulate::py_run_file('python/scrapingGE_A.py')
+  if (as.character(getwd()) == as.character(path.package('soccerdatas'))){
+    setwd('python')
+    reticulate::py_run_file('scrapingGE_A.py')
+  }
   .GlobalEnv$database = utils::read.csv('dtbase.csv')
   .GlobalEnv$future_matches = utils::read.csv('fmatches.csv')
   file.remove(c('dtbase.csv','fmatches.csv'))
