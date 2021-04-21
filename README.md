@@ -1,2 +1,2 @@
 # soccerdatas
-A webscraping package in development focusing in sports data.
+A web scraping package in development focusing in sports data.
