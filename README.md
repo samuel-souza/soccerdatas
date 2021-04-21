@@ -1,3 +1,2 @@
 # soccerdatas
-Webscraping of a GE website.
-A webscraping package in development.
+A webscraping package in development focusing in sports data.
