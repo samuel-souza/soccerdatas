@@ -1,15 +1,14 @@
 #' Settings
 #'
-#' Creates a virtual environment with needly libs
+#' Creates a virtual environment with needed libs
 #' for the functions of soccerdatas package.
 #'
 #' @return set the configuration needed for the libs used on package.
-#' @export set_ve
+#' @export set_env
 #' @importFrom "reticulate" "virtualenv_create"
-#' @examples set_ve()
+#' @examples set_env()
 
-set_ve = function () {
-
+set_env = function () {
 
   reticulate::virtualenv_create(envname = '~/.env',
                                 python = NULL,
