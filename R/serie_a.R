@@ -21,6 +21,4 @@ serie_a = function() {
   .GlobalEnv$future_matches = utils::read.csv(paste0(path.package('soccerdatas'),'/python/fmatches.csv'))
   file.remove(c('dtbase.csv','fmatches.csv'))
 
-
-
 }
