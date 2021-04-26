@@ -8,6 +8,7 @@
 #' @importFrom "reticulate" "virtualenv_create"
 #' @examples set_env()
 
+
 set_env = function () {
 
   reticulate::virtualenv_create(envname = '~/.env',
