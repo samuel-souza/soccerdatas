@@ -224,9 +224,28 @@ if rod*4 == 28:
         t1 = plb.find_element_by_class_name('placar-box__valor--mandante')
         t2 = plb.find_element_by_class_name('placar-box__valor--visitante')
         checker(mandante,t1.text,t2.text,visitante,lcl.text)
-    
+
+    sleep(2)
+    rb.click()
+
+    for i in range(0,2,1):
+        ul = m.find_element_by_class_name('tabela__mata-mata')
+        lis = ul.find_elements_by_class_name('theme')
+        tl = lis[i].find_element_by_class_name('jogo__transmissao--link')
+        inf = tl.find_element_by_class_name('jogo__informacoes')
+        lcl = inf.find_element_by_class_name('jogo__informacoes--local')
+        placar = tl.find_element_by_class_name('placar')
+        mdt = placar.find_element_by_class_name('placar__equipes--mandante')
+        mandante = mdt.find_element_by_class_name("equipes__sigla").get_attribute('textContent')
+        vst = placar.find_element_by_class_name('placar__equipes--visitante')
+        visitante = vst.find_element_by_class_name('equipes__sigla').get_attribute('textContent')
+        plb = placar.find_element_by_class_name('placar-box')
+        t1 = plb.find_element_by_class_name('placar-box__valor--mandante')
+        t2 = plb.find_element_by_class_name('placar-box__valor--visitante')
+        checker(mandante,t1.text,t2.text,visitante,lcl.text)
 
 
+ 
 
 
 fm = np.array([man,x,y,vis,l])
