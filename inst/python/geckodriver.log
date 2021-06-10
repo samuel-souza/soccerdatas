@@ -7047,3 +7047,156 @@ JavaScript error: https://s3.glbimg.com/v1/AUTH_b002e0039b9f46a5a4a94ff667d31e2d
 
 ###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
 
+1623354113614	geckodriver	INFO	Listening on 127.0.0.1:52344
+1623354116611	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\ojuar\\AppData\\Local\\Temp\\rust_mozprofileB1kc0J"
+[Parent 8524, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 772))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 419))
+1623354151285	Marionette	INFO	Listening on port 52354
+1623354151465	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://s3.glbimg.com/v1/AUTH_b002e0039b9f46a5a4a94ff667d31e2d/assets/dist/b5b71bbcc884ac178d4144f8553dac6f.js, line 5: SyntaxError: An invalid or illegal string was specified
+JavaScript error: https://s3.glbimg.com/v1/AUTH_b002e0039b9f46a5a4a94ff667d31e2d/assets/dist/b5b71bbcc884ac178d4144f8553dac6f.js, line 2: Error: [Horizon] Invalid data. bs-template-load 1.0. ValidationError: Invalid type: array (expected string)
+1623354201691	Marionette	INFO	Stopped listening on port 52354
+[Parent 8524, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1623354231585	geckodriver	INFO	Listening on 127.0.0.1:52642
+1623354234540	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\ojuar\\AppData\\Local\\Temp\\rust_mozprofile9O2X4A"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1623354241302	Marionette	INFO	Listening on port 52651
+1623354241820	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://s3.glbimg.com/v1/AUTH_b002e0039b9f46a5a4a94ff667d31e2d/assets/dist/b5b71bbcc884ac178d4144f8553dac6f.js, line 5: SyntaxError: An invalid or illegal string was specified
+JavaScript error: https://s3.glbimg.com/v1/AUTH_b002e0039b9f46a5a4a94ff667d31e2d/assets/dist/b5b71bbcc884ac178d4144f8553dac6f.js, line 2: Error: [Horizon] Invalid data. bs-template-load 1.0. ValidationError: Invalid type: array (expected string)
+1623354285564	Marionette	INFO	Stopped listening on port 52651
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1623354435498	geckodriver	INFO	Listening on 127.0.0.1:54106
+1623354438528	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\ojuar\\AppData\\Local\\Temp\\rust_mozprofilegUCcrX"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1623354443984	Marionette	INFO	Listening on port 54115
+1623354444342	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://s3.glbimg.com/v1/AUTH_b002e0039b9f46a5a4a94ff667d31e2d/assets/dist/b5b71bbcc884ac178d4144f8553dac6f.js, line 5: SyntaxError: An invalid or illegal string was specified
+JavaScript error: https://s3.glbimg.com/v1/AUTH_b002e0039b9f46a5a4a94ff667d31e2d/assets/dist/b5b71bbcc884ac178d4144f8553dac6f.js, line 2: Error: [Horizon] Invalid data. bs-template-load 1.0. ValidationError: Invalid type: array (expected string)
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1030: Error: Sqlite.jsm has been shutdown. Cannot open connection to: C:\Users\ojuar\AppData\Local\Temp\rust_mozprofilegUCcrX\protections.sqlite
+1623354479805	Marionette	INFO	Stopped listening on port 54115
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1623354506075	geckodriver	INFO	Listening on 127.0.0.1:54368
+1623354509067	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\ojuar\\AppData\\Local\\Temp\\rust_mozprofile1p7p8k"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1623354514815	Marionette	INFO	Listening on port 54378
+1623354515023	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://s3.glbimg.com/v1/AUTH_b002e0039b9f46a5a4a94ff667d31e2d/assets/dist/b5b71bbcc884ac178d4144f8553dac6f.js, line 5: SyntaxError: An invalid or illegal string was specified
+JavaScript error: https://s3.glbimg.com/v1/AUTH_b002e0039b9f46a5a4a94ff667d31e2d/assets/dist/b5b71bbcc884ac178d4144f8553dac6f.js, line 2: Error: [Horizon] Invalid data. bs-template-load 1.0. ValidationError: Invalid type: array (expected string)
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1030: Error: Sqlite.jsm has been shutdown. Cannot open connection to: C:\Users\ojuar\AppData\Local\Temp\rust_mozprofile1p7p8k\protections.sqlite
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1623354552744	Marionette	INFO	Stopped listening on port 54378
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1623355616923	geckodriver	INFO	Listening on 127.0.0.1:55260
+1623355619926	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\ojuar\\AppData\\Local\\Temp\\rust_mozprofilezYfVNU"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1623355625265	Marionette	INFO	Listening on port 55270
+1623355625308	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://s3.glbimg.com/v1/AUTH_b002e0039b9f46a5a4a94ff667d31e2d/assets/dist/b5b71bbcc884ac178d4144f8553dac6f.js, line 5: SyntaxError: An invalid or illegal string was specified
+JavaScript error: https://s3.glbimg.com/v1/AUTH_b002e0039b9f46a5a4a94ff667d31e2d/assets/dist/b5b71bbcc884ac178d4144f8553dac6f.js, line 2: Error: [Horizon] Invalid data. bs-template-load 1.0. ValidationError: Invalid type: array (expected string)
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 718: Error: Phase "Sqlite.jsm: wait until all connections are closed" is finished, it is too late to register completion condition "protections.sqlite#0: waiting for shutdown"
+1623355770219	Marionette	INFO	Stopped listening on port 55270
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1623355853058	geckodriver	INFO	Listening on 127.0.0.1:55681
+1623355856045	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\ojuar\\AppData\\Local\\Temp\\rust_mozprofilej4NCZP"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1623355864695	Marionette	INFO	Listening on port 55691
+1623355864860	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://s3.glbimg.com/v1/AUTH_b002e0039b9f46a5a4a94ff667d31e2d/assets/dist/b5b71bbcc884ac178d4144f8553dac6f.js, line 5: SyntaxError: An invalid or illegal string was specified
+JavaScript error: https://s3.glbimg.com/v1/AUTH_b002e0039b9f46a5a4a94ff667d31e2d/assets/dist/b5b71bbcc884ac178d4144f8553dac6f.js, line 2: Error: [Horizon] Invalid data. bs-template-load 1.0. ValidationError: Invalid type: array (expected string)
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1030: Error: Sqlite.jsm has been shutdown. Cannot open connection to: C:\Users\ojuar\AppData\Local\Temp\rust_mozprofilej4NCZP\protections.sqlite
+
+###!!! [Child][RunMessage] Error: Channel closing: too lat1623356111460	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\ojuar\\AppData\\Local\\Temp\\rust_mozprofile162ZtR"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1623356118195	Marionette	INFO	Listening on port 56113
+1623356118318	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://s3.glbimg.com/v1/AUTH_b002e0039b9f46a5a4a94ff667d31e2d/assets/dist/b5b71bbcc884ac178d4144f8553dac6f.js, line 5: SyntaxError: An invalid or illegal string was specified
+JavaScript error: https://s3.glbimg.com/v1/AUTH_b002e0039b9f46a5a4a94ff667d31e2d/assets/dist/b5b71bbcc884ac178d4144f8553dac6f.js, line 2: Error: [Horizon] Invalid data. bs-template-load 1.0. ValidationError: Invalid type: array (expected string)
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1030: Error: Sqlite.jsm has been shutdown. Cannot open connection to: C:\Users\ojuar\AppData\Local\Temp\rust_mozprofile162ZtR\protections.sqlite
+1623356166612	Marionette	INFO	Stopped listening on port 56113
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1623356230612	geckodriver	INFO	Listening on 127.0.0.1:56415
+1623356233648	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\ojuar\\AppData\\Local\\Temp\\rust_mozprofileJMVxve"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1623356239006	Marionette	INFO	Listening on port 56424
+1623356239506	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://s3.glbimg.com/v1/AUTH_b002e0039b9f46a5a4a94ff667d31e2d/assets/dist/b5b71bbcc884ac178d4144f8553dac6f.js, line 5: SyntaxError: An invalid or illegal string was specified
+JavaScript error: https://s3.glbimg.com/v1/AUTH_b002e0039b9f46a5a4a94ff667d31e2d/assets/dist/b5b71bbcc884ac178d4144f8553dac6f.js, line 2: Error: [Horizon] Invalid data. bs-template-load 1.0. ValidationError: Invalid type: array (expected string)
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1030: Error: Sqlite.jsm has been shutdown. Cannot open connection to: C:\Users\ojuar\AppData\Local\Temp\rust_mozprofileJMVxve\protections.sqlite
+1623356292866	Marionette	INFO	Stopped listening on port 56424
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1623356341892	geckodriver	INFO	Listening on 127.0.0.1:56672
+1623356344938	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\ojuar\\AppData\\Local\\Temp\\rust_mozprofilexrhqfE"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1623356350224	Marionette	INFO	Listening on port 56681
+1623356350270	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://s3.glbimg.com/v1/AUTH_b002e0039b9f46a5a4a94ff667d31e2d/assets/dist/b5b71bbcc884ac178d4144f8553dac6f.js, line 5: SyntaxError: An invalid or illegal string was specified
+JavaScript error: https://s3.glbimg.com/v1/AUTH_b002e0039b9f46a5a4a94ff667d31e2d/assets/dist/b5b71bbcc884ac178d4144f8553dac6f.js, line 2: Error: [Horizon] Invalid data. bs-template-load 1.0. ValidationError: Invalid type: array (expected string)
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x6B0027,name=PNecko::Msg_RemoveRequestContext) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1623356391709	Marionette	INFO	Stopped listening on port 56681
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1623356634173	geckodriver	INFO	Listening on 127.0.0.1:57074
+1623356637225	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\ojuar\\AppData\\Local\\Temp\\rust_mozprofileMfF6jF"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1623356642566	Marionette	INFO	Listening on port 57084
+1623356643087	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://s3.glbimg.com/v1/AUTH_b002e0039b9f46a5a4a94ff667d31e2d/assets/dist/b5b71bbcc884ac178d4144f8553dac6f.js, line 5: SyntaxError: An invalid or illegal string was specified
+JavaScript error: https://s3.glbimg.com/v1/AUTH_b002e0039b9f46a5a4a94ff667d31e2d/assets/dist/b5b71bbcc884ac178d4144f8553dac6f.js, line 2: Error: [Horizon] Invalid data. bs-template-load 1.0. ValidationError: Invalid type: array (expected string)
+1623356686169	Marionette	INFO	Stopped listening on port 57084
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x6B0027,name=PNecko::Msg_RemoveRequestContext) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x230032,name=PBrowser::Msg___delete__) Channel closing: too late to send/recv, messages will be lost
+
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1030: Error: Sqlite.jsm has been shutdown. Cannot open connection to: C:\Users\ojuar\AppData\Local\Temp\rust_mozprofileMfF6jF\protections.sqlite
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1623357166927	geckodriver	INFO	Listening on 127.0.0.1:57582
+1623357169954	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\ojuar\\AppData\\Local\\Temp\\rust_mozprofileO9W4Gs"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1623357175140	Marionette	INFO	Listening on port 57591
+1623357175283	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://s3.glbimg.com/v1/AUTH_b002e0039b9f46a5a4a94ff667d31e2d/assets/dist/b5b71bbcc884ac178d4144f8553dac6f.js, line 5: SyntaxError: An invalid or illegal string was specified
+JavaScript error: https://s3.glbimg.com/v1/AUTH_b002e0039b9f46a5a4a94ff667d31e2d/assets/dist/b5b71bbcc884ac178d4144f8553dac6f.js, line 2: Error: [Horizon] Invalid data. bs-template-load 1.0. ValidationError: Invalid type: array (expected string)
+1623357212049	Marionette	INFO	Stopped listening on port 57591
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 718: Error: Phase "Sqlite.jsm: wait until all connections are closed" is finished, it is too late to register completion condition "protections.sqlite#0: waiting for shutdown"
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
