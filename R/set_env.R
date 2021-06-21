@@ -13,7 +13,7 @@ set_env = function () {
 
   reticulate::virtualenv_create(envname = '~/.env',
                                 python = NULL,
-                                packages = c('numpy','pandas','selenium'))
+                                packages = c('numpy','pandas','selenium','webdriver-manager'))
 
   Sys.setenv(RETICULATE_PYTHON='~/.env/Scripts')
 

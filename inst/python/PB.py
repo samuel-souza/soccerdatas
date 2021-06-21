@@ -2,12 +2,11 @@ from selenium import webdriver
 from time import sleep 
 import numpy as np 
 import pandas as pd 
-
+from webdriver_manager.firefox import GeckoDriverManager
+import os 
 
 url = 'https://globoesporte.globo.com/pb/futebol/campeonato-paraibano/'
-driver = './python'
-dir(driver)
-browser = webdriver.Firefox()
+browser = webdriver.Firefox(executable_path = GeckoDriverManager().install(),service_log_path= os.devnull)
 browser.get(url)
 browser.maximize_window()
 m = browser.find_element_by_class_name('grid-24')
@@ -22,7 +21,7 @@ if fases == 'FINAL':
         lb = m.find_element_by_class_name('navegacao-fase__seta-esquerda')
         for i in range(3):
             lb.click()
-            sleep(0.5)
+            sleep(1)
 
     except:
         None 
@@ -31,7 +30,7 @@ elif fases == 'SEMIFINAL':
         lb = m.find_element_by_class_name('navegacao-fase__seta-esquerda')
         for i in range(2):
             lb.click()
-            sleep(0.5)
+            sleep(1)
 
     except:
         None 
@@ -108,12 +107,6 @@ def checker(ho,pm,pv,vi,lo):
             except:
                 None
         
-        
-    
-
-
-
-
 
 times_estadios = [
     ['BOT','ALMEIDÃO'],
@@ -125,14 +118,6 @@ times_estadios = [
     ['PER','AMIGÃO'],
     ['ATL','PERPETÃO']
 ]
-
-
-
-
-
-
-
-
 
 
 
@@ -245,13 +230,9 @@ if rod*4 == 28:
         checker(mandante,t1.text,t2.text,visitante,lcl.text)
 
 
- 
-
-
 fm = np.array([man,x,y,vis,l])
 fm = fm.transpose() 
 future_matches = pd.DataFrame(fm, columns = ['Home','X','Y','Visitor','Local'])
-
 
 
 db = np.array([MAN,X,Y,VIS,c])

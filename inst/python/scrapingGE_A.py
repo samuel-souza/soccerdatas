@@ -1,14 +1,13 @@
-from selenium import webdriver
+from selenium import webdriver 
 from time import sleep 
+import numpy as np 
 import pandas as pd 
-import numpy as np
+from webdriver_manager.firefox import GeckoDriverManager
 import os 
 
 
 url = 'https://globoesporte.globo.com/futebol/brasileirao-serie-a/'
-driver = './python'
-dir(driver)
-browser = webdriver.Firefox()
+browser = webdriver.Firefox(executable_path = GeckoDriverManager().install(),service_log_path= os.devnull)
 browser.get(url)
 
 browser.maximize_window()

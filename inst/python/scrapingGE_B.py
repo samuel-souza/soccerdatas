@@ -1,11 +1,12 @@
-from selenium.webdriver import Firefox
+from selenium import webdriver 
 from time import sleep 
-import pandas as pd 
 import numpy as np 
+import pandas as pd 
+from webdriver_manager.firefox import GeckoDriverManager
+import os 
 
 url = "https://globoesporte.globo.com/futebol/brasileirao-serie-b/"
-
-browser = Firefox()
+browser = webdriver.Firefox(executable_path = GeckoDriverManager().install(),service_log_path= os.devnull)
 browser.get(url)
 
 m = browser.find_element_by_tag_name('main')
