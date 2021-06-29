@@ -9,7 +9,6 @@ import os
 url = 'https://globoesporte.globo.com/futebol/brasileirao-serie-a/'
 browser = webdriver.Firefox(executable_path = GeckoDriverManager().install(),service_log_path= os.devnull)
 browser.get(url)
-
 browser.maximize_window()
 
 m = browser.find_element_by_tag_name('main')
