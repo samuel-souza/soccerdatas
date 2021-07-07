@@ -14,8 +14,9 @@ set_env = function () {
   reticulate::virtualenv_create(envname = '~/.env',
                                 python = NULL,
                                 version = '3.8.7',
-                                packages = c('numpy','pandas','selenium',
-                                             'webdriver_manager'))
+                                packages = c('numpy','pandas','selenium'),
+                                pip_options = character('pip install webdriver_manager')
+                                )
   Sys.setenv(RETICULATE_PYTHON='~/.env/Scripts')
 
 }
