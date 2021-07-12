@@ -16,6 +16,6 @@ set_env = function () {
                                 version = '3.8.7',
                                 packages=c('numpy','pandas','selenium'))
   Sys.setenv(RETICULATE_PYTHON='~/.env/Scripts')
-  virtualenv_install(envname = "~/.env", packages = "webdriver-manager",
+  reticulate::virtualenv_install(envname = "~/.env", packages = "webdriver-manager",
                      ignore_installed = TRUE)
 }
