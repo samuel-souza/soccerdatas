@@ -5,9 +5,10 @@ import pandas as pd
 from webdriver_manager.firefox import GeckoDriverManager
 import os 
 
-
+os.environ['WDM_LOCAL'] = '1'
+p = GeckoDriverManager(log_level=0).install()
 url = 'https://globoesporte.globo.com/futebol/brasileirao-serie-a/'
-browser = webdriver.Firefox(executable_path = GeckoDriverManager().install(),service_log_path= os.devnull)
+browser = webdriver.Firefox(executable_path = p,service_log_path=os.devnull)
 browser.get(url)
 browser.maximize_window()
 

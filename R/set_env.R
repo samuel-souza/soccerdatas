@@ -20,5 +20,5 @@ set_env = function () {
   Sys.setenv(RETICULATE_PYTHON='~/.env/Scripts')
 
   reticulate::virtualenv_install(envname = "~/.env", packages = "webdriver-manager",
-                     ignore_installed = T)
+                                 ignore_installed = T)
 }
