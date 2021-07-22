@@ -6,7 +6,6 @@ from webdriver_manager.firefox import GeckoDriverManager
 import os 
 import platform 
 
-
 url = 'https://globoesporte.globo.com/futebol/brasileirao-serie-a/'
 sys = platform.system()
 

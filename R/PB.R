@@ -15,10 +15,13 @@ PB = function() {
 
   Sys.getenv("RETICULATE_PYTHON")
   reticulate::use_virtualenv(virtualenv='~/.env',required=T)
+  dir = getwd()
+  setwd(paste0(as.character(path.package('soccerdatas')),'/python'))
   reticulate::py_run_file(paste0(path.package('soccerdatas'),'/python/PB.py'))
 
   .GlobalEnv$database = utils::read.csv('~/dtbase.csv')
   .GlobalEnv$future_matches = utils::read.csv('~/fmatches.csv')
   file.remove(c('~/dtbase.csv','~/fmatches.csv'))
+  setwd(dir)
 
 }
