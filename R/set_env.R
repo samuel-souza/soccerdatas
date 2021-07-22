@@ -16,9 +16,13 @@ set_env = function () {
                                 version = '3.8.7',
                                 packages=c('numpy','pandas','selenium'),
                                 pip_options = character('python3 -m pip install --upgrade pip'))
+  os = Sys.info()[1]
 
-  Sys.setenv(RETICULATE_PYTHON='~/.env/Scripts')
-
+  if (os == "Windows") {
+    Sys.setenv(RETICULATE_PYTHON='~/.env/Scripts')
+  } else {
+    Sys.setenv(RETICULATE_PYTHON='~/.env/bin')
+  }
   reticulate::virtualenv_install(envname = "~/.env", packages = "webdriver-manager",
                                  ignore_installed = T)
 }

@@ -16,10 +16,9 @@ serie_a = function() {
 
   Sys.getenv("RETICULATE_PYTHON")
   reticulate::use_virtualenv(virtualenv='~/.env',required=T)
-  setwd(paste0(as.character(path.package('soccerdatas')),'/python'))
   reticulate::py_run_file(paste0(path.package('soccerdatas'),'/python/scrapingGE_A.py'))
 
-  .GlobalEnv$database = utils::read.csv(paste0(path.package('soccerdatas'),'/python/dtbase.csv'))
-  .GlobalEnv$future_matches = utils::read.csv(paste0(path.package('soccerdatas'),'/python/fmatches.csv'))
-  file.remove(c('dtbase.csv','fmatches.csv'))
+  .GlobalEnv$database = utils::read.csv('~/dtbase.csv')
+  .GlobalEnv$future_matches = utils::read.csv('~/fmatches.csv')
+  file.remove(c('~/dtbase.csv','~/fmatches.csv'))
 }

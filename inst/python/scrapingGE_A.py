@@ -4,11 +4,17 @@ import numpy as np
 import pandas as pd 
 from webdriver_manager.firefox import GeckoDriverManager
 import os 
+import platform 
 
-os.environ['WDM_LOCAL'] = '1'
-p = GeckoDriverManager(log_level=0).install()
+
 url = 'https://globoesporte.globo.com/futebol/brasileirao-serie-a/'
-browser = webdriver.Firefox(executable_path = p,service_log_path=os.devnull)
+sys = platform.system()
+
+if sys == "Windows":
+    browser = webdriver.Firefox(service_log_path= os.devnull)
+else:
+    browser = webdriver.Firefox(executable_path = GeckoDriverManager().install(),service_log_path= os.devnull)
+    
 browser.get(url)
 browser.maximize_window()
 
@@ -141,11 +147,11 @@ for j in range(38-rod):
 fm = np.array([mdt,p1,p2,vi])
 fm = fm.transpose() 
 future_matches = pd.DataFrame(fm, columns = ['Home','X','Y','Visitor'])
-future_matches.to_csv('fmatches.csv', index = False)
+future_matches.to_csv('~/fmatches.csv', index = False)
 
 dtb = np.array([mandante,placart1,placart2,visitante,c])
 dtb = dtb.transpose()
 database = pd.DataFrame(dtb, columns = ['Home','X','Y','Visitor','Local'])
-database.to_csv('dtbase.csv',index = False)   
+database.to_csv('~/dtbase.csv',index = False)   
 
 browser.quit()

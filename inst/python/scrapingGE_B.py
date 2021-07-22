@@ -4,9 +4,16 @@ import numpy as np
 import pandas as pd 
 from webdriver_manager.firefox import GeckoDriverManager
 import os 
+import platform
 
 url = "https://globoesporte.globo.com/futebol/brasileirao-serie-b/"
-browser = webdriver.Firefox(executable_path = GeckoDriverManager().install(),service_log_path= os.devnull)
+sys = platform.system()
+
+if sys == "Windows":
+    browser = webdriver.Firefox(service_log_path= os.devnull)
+else:
+    browser = webdriver.Firefox(executable_path = GeckoDriverManager().install(),service_log_path= os.devnull)
+    
 browser.get(url)
 
 m = browser.find_element_by_tag_name('main')
@@ -140,8 +147,8 @@ bdd = bdd.transpose()
 teste = pd.DataFrame(bdd, columns = ['Home','X','Y','Visitor','Local'])
 teste2 = pd.DataFrame(jf, columns = ['Home','X','Y','Visitor'])
 
-teste.to_csv('bdds.csv',index = False,sep=',')
-teste2.to_csv('jf.csv', index = False,sep=',')
+teste.to_csv('~/bdds.csv',index = False,sep=',')
+teste2.to_csv('~/jf.csv', index = False,sep=',')
 
 print(teste)
 print(teste2)

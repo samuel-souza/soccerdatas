@@ -4,9 +4,16 @@ import numpy as np
 import pandas as pd 
 from webdriver_manager.firefox import GeckoDriverManager
 import os 
+import platform 
 
 url = 'https://globoesporte.globo.com/pb/futebol/campeonato-paraibano/'
-browser = webdriver.Firefox(executable_path = GeckoDriverManager().install(),service_log_path= os.devnull)
+sys = platform.system()
+
+if sys == "Windows":
+    browser = webdriver.Firefox(service_log_path= os.devnull)
+else:
+    browser = webdriver.Firefox(executable_path = GeckoDriverManager().install(),service_log_path= os.devnull)
+    
 browser.get(url)
 browser.maximize_window()
 m = browser.find_element_by_class_name('grid-24')
@@ -242,8 +249,8 @@ database = pd.DataFrame(db,columns=['Home','X','Y','Visitor','Local'])
 
 browser.quit()
 
-database.to_csv('dtbase.csv',index=False)
-future_matches.to_csv('fmatches.csv',index=False)
+database.to_csv('~/dtbase.csv',index=False)
+future_matches.to_csv('~/fmatches.csv',index=False)
 
 
 
