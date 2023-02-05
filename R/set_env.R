@@ -20,11 +20,11 @@ set_env = function () {
 
   if (os == "Windows") {
     Sys.setenv(RETICULATE_PYTHON='~/.env/Scripts')
-    reticulate::virtualenv_install(envname = "~/.env", packages = "webdriver-manager",
+    reticulate::virtualenv_install(envname = "~/.env", packages = "webdriver_manager",
                                    ignore_installed = T)
   } else {
     Sys.setenv(RETICULATE_PYTHON='~/.env/bin')
-    reticulate::virtualenv_install(envname = "~/.env", packages = "webdriver-manager",
+    reticulate::virtualenv_install(envname = "~/.env", packages = "webdriver_manager",
                                    ignore_installed = T)
   }
 
