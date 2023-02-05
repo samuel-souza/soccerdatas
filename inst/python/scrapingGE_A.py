@@ -12,7 +12,7 @@ url = 'https://globoesporte.globo.com/futebol/brasileirao-serie-a/'
 sys = platform.system()
 
 #if sys == "Windows":
-browser = webdriver.Firefox(executable_path=GeckoDriverManager().install(),service_log_path=None)
+browser = webdriver.Firefox(executable_path=GeckoDriverManager().install(),service_log_path=os.devnull)
 #else:
    # browser = webdriver.Firefox(executable_path = GeckoDriverManager().install(),service_log_path= os.devnull)
 
@@ -149,11 +149,11 @@ for j in range(38-rod):
 fm = np.array([mdt,p1,p2,vi])
 fm = fm.transpose() 
 future_matches = pd.DataFrame(fm, columns = ['Home','X','Y','Visitor'])
-future_matches.to_csv('~/fmatches.csv', index = False)
+future_matches.to_csv('fmatches.csv', index = False)
 
 dtb = np.array([mandante,placart1,placart2,visitante,c])
 dtb = dtb.transpose()
 database = pd.DataFrame(dtb, columns = ['Home','X','Y','Visitor','Local'])
-database.to_csv('~/dtbase.csv',index = False)   
+database.to_csv('dtbase.csv',index = False)   
 
 browser.quit()
