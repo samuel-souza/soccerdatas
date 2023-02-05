@@ -12,10 +12,11 @@ url = 'https://globoesporte.globo.com/futebol/brasileirao-serie-a/'
 sys = platform.system()
 
 #if sys == "Windows":
-browser = webdriver.Firefox(executable_path=GeckoDriverManager().install())
+browser = webdriver.Firefox(executable_path=GeckoDriverManager().install(),service_log_path=None)
 #else:
    # browser = webdriver.Firefox(executable_path = GeckoDriverManager().install(),service_log_path= os.devnull)
-    
+
+
 browser.get(url)
 browser.maximize_window()
 
