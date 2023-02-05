@@ -15,9 +15,7 @@
 serie_a = function() {
 
   Sys.getenv("RETICULATE_PYTHON")
-  #reticulate::use_virtualenv(virtualenv='~/.env',required=T)
   dir = getwd()
-  #setwd(paste0(as.character(path.package('soccerdatas')),'/python'))
   setwd(as.character(path.package('soccerdatas')))
   reticulate::py_run_file(paste0(path.package('soccerdatas'),'/python/scrapingGE_A.py'))
 

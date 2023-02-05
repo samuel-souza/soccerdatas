@@ -11,10 +11,7 @@ import platform
 url = 'https://globoesporte.globo.com/pb/futebol/campeonato-paraibano/'
 sys = platform.system()
 
-#if sys == "Windows":
 browser = webdriver.Firefox(executable_path=GeckoDriverManager().install(),service_log_path=None)
-#else:
-#    browser = webdriver.Firefox(executable_path = GeckoDriverManager().install(),service_log_path= os.devnull)
     
 browser.get(url)
 browser.maximize_window()
@@ -251,6 +248,6 @@ database = pd.DataFrame(db,columns=['Home','X','Y','Visitor','Local'])
 
 browser.quit()
 
-database.to_csv('~/dtbase.csv',index=False)
-future_matches.to_csv('~/fmatches.csv',index=False)
+database.to_csv('dtbase.csv',index=False)
+future_matches.to_csv('fmatches.csv',index=False)
 
