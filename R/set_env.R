@@ -44,12 +44,12 @@ set_env = function () {
 
   if (os == "Windows") {
     Sys.setenv(RETICULATE_PYTHON=paste0(path.package('soccerdatas'),'/.env/Scripts'))
-    reticulate::virtualenv_install(envname = paste0(path.package('soccerdatas'),'/.env', packages = "webdriver-manager",
-                                   ignore_installed = T))
+    reticulate::virtualenv_install(envname = paste0(path.package('soccerdatas'),'/.env'), packages = "webdriver-manager",
+                                   ignore_installed = T)
   } else {
     Sys.setenv(RETICULATE_PYTHON=paste0(path.package('soccerdatas'),'/.env/bin'))
-    reticulate::virtualenv_install(envname = paste0(path.package('soccerdatas'),'/.env', packages = "webdriver-manager",
-                                   ignore_installed = T))
+    reticulate::virtualenv_install(envname = paste0(path.package('soccerdatas'),'/.env'), packages = "webdriver-manager",
+                                   ignore_installed = T)
   }
 
 }
