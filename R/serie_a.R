@@ -15,7 +15,7 @@
 serie_a = function() {
 
   Sys.getenv("RETICULATE_PYTHON")
-  reticulate::use_virtualenv(virtualenv='~/.env',required=T)
+  #reticulate::use_virtualenv(virtualenv='~/.env',required=T)
   dir = getwd()
   #setwd(paste0(as.character(path.package('soccerdatas')),'/python'))
   setwd(as.character(path.package('soccerdatas')))
