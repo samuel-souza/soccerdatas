@@ -1,4 +1,6 @@
-from selenium import webdriver 
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.common.by import By
 from time import sleep 
 import numpy as np 
 import pandas as pd 
@@ -9,15 +11,15 @@ import platform
 url = "https://globoesporte.globo.com/futebol/brasileirao-serie-b/"
 sys = platform.system()
 
-if sys == "Windows":
-    browser = webdriver.Firefox(service_log_path= os.devnull)
-else:
-    browser = webdriver.Firefox(executable_path = GeckoDriverManager().install(),service_log_path= os.devnull)
+#if sys == "Windows":
+browser = webdriver.Firefox(executable_path=GeckoDriverManager().install())
+#else:
+#    browser = webdriver.Firefox(executable_path = GeckoDriverManager().install(),service_log_path= os.devnull)
     
 browser.get(url)
 
-m = browser.find_element_by_tag_name('main')
-r = m.find_element_by_class_name('lista-jogos__navegacao--rodada')
+m = browser.find_element(By.TAG_NAME,'main')
+r = m.find_element(By.CLASS_NAME,'lista-jogos__navegacao--rodada')
 rod = int(r.text.split()[0].replace('ª',''))
 print(rod)
 
@@ -54,11 +56,11 @@ times_estadios = [
     ['OES','ARENA BARUERI']
 ]
 
-botoes = browser.find_element_by_class_name('lista-jogos__navegacao')
-botaodir = botoes.find_element_by_class_name('lista-jogos__navegacao--seta-direita')
+botoes = browser.find_element(By.CLASS_NAME,'lista-jogos__navegacao')
+botaodir = botoes.find_element(By.CLASS_NAME,'lista-jogos__navegacao--seta-direita')
 
-botoes = browser.find_element_by_class_name('lista-jogos__navegacao')
-botaoesq = botoes.find_element_by_class_name('lista-jogos__navegacao--seta-esquerda')
+botoes = browser.find_element(By.CLASS_NAME,'lista-jogos__navegacao')
+botaoesq = botoes.find_element(By.CLASS_NAME,'lista-jogos__navegacao--seta-esquerda')
 
 
 
@@ -102,17 +104,17 @@ def checker(h,x,y,v,l):
 for j in range(rod):
 
     for i in range(10):
-        ul = m.find_element_by_class_name('lista-jogos') 
-        lis = ul.find_elements_by_tag_name('li') 
-        div1 = lis[i].find_element_by_tag_name('div')
-        infjogo = div1.find_element_by_class_name('jogo__informacoes')
-        lo = infjogo.find_element_by_class_name('jogo__informacoes--local')
-        p = div1.find_element_by_class_name('placar')
-        man = p.find_element_by_class_name('placar__equipes--mandante')
-        placardiv = p.find_element_by_class_name('placar-box')
-        pt1 = placardiv.find_element_by_class_name('placar-box__valor--mandante')
-        vis = p.find_element_by_class_name('placar__equipes--visitante')
-        pt2 = placardiv.find_element_by_class_name('placar-box__valor--visitante')
+        ul = m.find_element(By.CLASS_NAME,'lista-jogos') 
+        lis = ul.find_elements(By.TAG_NAME,'li') 
+        div1 = lis[i].find_element(By.TAG_NAME,'div')
+        infjogo = div1.find_element(By.CLASS_NAME,'jogo__informacoes')
+        lo = infjogo.find_element(By.CLASS_NAME,'jogo__informacoes--local')
+        p = div1.find_element(By.CLASS_NAME,'placar')
+        man = p.find_element(By.CLASS_NAME,'placar__equipes--mandante')
+        placardiv = p.find_element(By.CLASS_NAME,'placar-box')
+        pt1 = placardiv.find_element(By.CLASS_NAME,'placar-box__valor--mandante')
+        vis = p.find_element(By.CLASS_NAME,'placar__equipes--visitante')
+        pt2 = placardiv.find_element(By.CLASS_NAME,'placar-box__valor--visitante')
         checker(man.text,pt1.text,pt2.text,vis.text,lo.text)
     botaodir.click()
     sleep(0.3)
@@ -120,17 +122,17 @@ for j in range(rod):
 for j in range(38-rod):
 
     for i in range(10):          
-        ul = m.find_element_by_class_name('lista-jogos') 
-        lis = ul.find_elements_by_tag_name('li') 
-        div1 = lis[i].find_element_by_tag_name('div')
-        infjogo = div1.find_element_by_class_name('jogo__informacoes')
-        lo = infjogo.find_element_by_class_name('jogo__informacoes--local')
-        div11 = div1.find_element_by_class_name('placar')
-        man = div11.find_element_by_class_name('placar__equipes--mandante')
-        placardiv = div11.find_element_by_class_name('placar-box')
-        pt1 = placardiv.find_element_by_class_name('placar-box__valor--mandante')
-        pt2 = placardiv.find_element_by_class_name('placar-box__valor--visitante')
-        vis = div11.find_element_by_class_name('placar__equipes--visitante')
+        ul = m.find_element(By.CLASS_NAME,'lista-jogos') 
+        lis = ul.find_elements(By.TAG_NAME,'li') 
+        div1 = lis[i].find_element(By.TAG_NAME,'div')
+        infjogo = div1.find_element(By.CLASS_NAME,'jogo__informacoes')
+        lo = infjogo.find_element(By.CLASS_NAME,'jogo__informacoes--local')
+        div11 = div1.find_element(By.CLASS_NAME,'placar')
+        man = div11.find_element(By.CLASS_NAME,'placar__equipes--mandante')
+        placardiv = div11.find_element(By.CLASS_NAME,'placar-box')
+        pt1 = placardiv.find_element(By.CLASS_NAME,'placar-box__valor--mandante')
+        pt2 = placardiv.find_element(By.CLASS_NAME,'placar-box__valor--visitante')
+        vis = div11.find_element(By.CLASS_NAME,'placar__equipes--visitante')
         checker(man.text,pt1.text,pt2.text,vis.text,lo.text)
     botaodir.click()
     sleep(0.3)
@@ -150,7 +152,5 @@ teste2 = pd.DataFrame(jf, columns = ['Home','X','Y','Visitor'])
 teste.to_csv('~/bdds.csv',index = False,sep=',')
 teste2.to_csv('~/jf.csv', index = False,sep=',')
 
-print(teste)
-print(teste2)
 browser.quit()
 

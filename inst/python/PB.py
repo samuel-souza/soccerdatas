@@ -1,4 +1,6 @@
-from selenium import webdriver 
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.common.by import By
 from time import sleep 
 import numpy as np 
 import pandas as pd 
@@ -9,23 +11,23 @@ import platform
 url = 'https://globoesporte.globo.com/pb/futebol/campeonato-paraibano/'
 sys = platform.system()
 
-if sys == "Windows":
-    browser = webdriver.Firefox(service_log_path= os.devnull)
-else:
-    browser = webdriver.Firefox(executable_path = GeckoDriverManager().install(),service_log_path= os.devnull)
+#if sys == "Windows":
+browser = webdriver.Firefox(executable_path=GeckoDriverManager().install())
+#else:
+#    browser = webdriver.Firefox(executable_path = GeckoDriverManager().install(),service_log_path= os.devnull)
     
 browser.get(url)
 browser.maximize_window()
-m = browser.find_element_by_class_name('grid-24')
-f = m.find_element_by_class_name('navegacao-fase')
-fases = f.find_element_by_class_name('navegacao-fase__fase').text
+m = browser.find_element(By.CLASS_NAME,'grid-24')
+f = m.find_element(By.CLASS_NAME,'navegacao-fase')
+fases = f.find_element(By.CLASS_NAME,'navegacao-fase__fase').text
 fases = fases.upper()
 
 
 
 if fases == 'FINAL':
     try:
-        lb = m.find_element_by_class_name('navegacao-fase__seta-esquerda')
+        lb = m.find_element(By.CLASS_NAME,'navegacao-fase__seta-esquerda')
         for i in range(3):
             lb.click()
             sleep(1)
@@ -34,7 +36,7 @@ if fases == 'FINAL':
         None 
 elif fases == 'SEMIFINAL':
     try:
-        lb = m.find_element_by_class_name('navegacao-fase__seta-esquerda')
+        lb = m.find_element(By.CLASS_NAME,'navegacao-fase__seta-esquerda')
         for i in range(2):
             lb.click()
             sleep(1)
@@ -43,25 +45,25 @@ elif fases == 'SEMIFINAL':
         None 
 elif fases == 'SEGUNDA FASE':
     try:
-        lb = m.find_element_by_class_name('navegacao-fase__seta-esquerda')
+        lb = m.find_element(By.CLASS_NAME,'navegacao-fase__seta-esquerda')
         lb.click()
 
 
     except:
         None 
 else:
-    botesq = m.find_element_by_class_name('lista-jogos__navegacao--seta-esquerda')
-    botdir = m.find_element_by_class_name('lista-jogos__navegacao--seta-direita')
+    botesq = m.find_element(By.CLASS_NAME,'lista-jogos__navegacao--seta-esquerda')
+    botdir = m.find_element(By.CLASS_NAME,'lista-jogos__navegacao--seta-direita')
 
 
 sleep(1)
 
-r = m.find_element_by_class_name('lista-jogos__navegacao--rodada')
+r = m.find_element(By.CLASS_NAME,'lista-jogos__navegacao--rodada')
 rod = int(r.text.split()[0].replace('ª',''))
 
 
-botesq = m.find_element_by_class_name('lista-jogos__navegacao--seta-esquerda')
-botdir = m.find_element_by_class_name('lista-jogos__navegacao--seta-direita')
+botesq = m.find_element(By.CLASS_NAME,'lista-jogos__navegacao--seta-esquerda')
+botdir = m.find_element(By.CLASS_NAME,'lista-jogos__navegacao--seta-direita')
 
 MAN = []
 X = []
@@ -134,19 +136,19 @@ for i in range(rod):
 
 for i in range(rod):
     for j in range(4):
-        ul = m.find_element_by_class_name('lista-jogos')
-        lis = ul.find_elements_by_tag_name('li')
-        thm = lis[j].find_element_by_class_name('theme')
-        inf = thm.find_element_by_class_name('jogo__informacoes')
-        lcl = inf.find_element_by_class_name('jogo__informacoes--local')
-        placar = thm.find_element_by_class_name('placar')
-        mdt = placar.find_element_by_class_name('placar__equipes--mandante')
-        mandante = mdt.find_element_by_class_name('equipes__sigla')
-        vst = placar.find_element_by_class_name('placar__equipes--visitante')
-        visitante = vst.find_element_by_class_name('equipes__sigla')
-        plb = placar.find_element_by_class_name('placar-box')
-        t1 = plb.find_element_by_class_name('placar-box__valor--mandante')
-        t2 = plb.find_element_by_class_name('placar-box__valor--visitante')
+        ul = m.find_element(By.CLASS_NAME,'lista-jogos')
+        lis = ul.find_elements(By.TAG_NAME,'li')
+        thm = lis[j].find_element(By.CLASS_NAME,'theme')
+        inf = thm.find_element(By.CLASS_NAME,'jogo__informacoes')
+        lcl = inf.find_element(By.CLASS_NAME,'jogo__informacoes--local')
+        placar = thm.find_element(By.CLASS_NAME,'placar')
+        mdt = placar.find_element(By.CLASS_NAME,'placar__equipes--mandante')
+        mandante = mdt.find_element(By.CLASS_NAME,'equipes__sigla')
+        vst = placar.find_element(By.CLASS_NAME,'placar__equipes--visitante')
+        visitante = vst.find_element(By.CLASS_NAME,'equipes__sigla')
+        plb = placar.find_element(By.CLASS_NAME,'placar-box')
+        t1 = plb.find_element(By.CLASS_NAME,'placar-box__valor--mandante')
+        t2 = plb.find_element(By.CLASS_NAME,'placar-box__valor--visitante')
         checker(mandante.text,t1.text,t2.text,visitante.text,lcl.text)
 
     botdir.click()
@@ -157,19 +159,19 @@ for i in range(rod):
 
 for i in range(7-rod):
     for j in range(4):
-        ul = m.find_element_by_class_name('lista-jogos')
-        lis = ul.find_elements_by_tag_name('li')
-        thm = lis[j].find_element_by_class_name('theme')
-        inf = thm.find_element_by_class_name('jogo__informacoes')
-        lcl = inf.find_element_by_class_name('jogo__informacoes--local')
-        placar = thm.find_element_by_class_name('placar')
-        mdt = placar.find_element_by_class_name('placar__equipes--mandante')
-        mandante = mdt.find_element_by_class_name('equipes__sigla')
-        vst = placar.find_element_by_class_name('placar__equipes--visitante')
-        visitante = vst.find_element_by_class_name('equipes__sigla')
-        plb = placar.find_element_by_class_name('placar-box')
-        t1 = plb.find_element_by_class_name('placar-box__valor--mandante')
-        t2 = plb.find_element_by_class_name('placar-box__valor--visitante')
+        ul = m.find_element(By.CLASS_NAME,'lista-jogos')
+        lis = ul.find_elements(By.TAG_NAME,'li')
+        thm = lis[j].find_element(By.CLASS_NAME,'theme')
+        inf = thm.find_element(By.CLASS_NAME,'jogo__informacoes')
+        lcl = inf.find_element(By.CLASS_NAME,'jogo__informacoes--local')
+        placar = thm.find_element(By.CLASS_NAME,'placar')
+        mdt = placar.find_element(By.CLASS_NAME,'placar__equipes--mandante')
+        mandante = mdt.find_element(By.CLASS_NAME,'equipes__sigla')
+        vst = placar.find_element(By.CLASS_NAME,'placar__equipes--visitante')
+        visitante = vst.find_element(By.CLASS_NAME,'equipes__sigla')
+        plb = placar.find_element(By.CLASS_NAME,'placar-box')
+        t1 = plb.find_element(By.CLASS_NAME,'placar-box__valor--mandante')
+        t2 = plb.find_element(By.CLASS_NAME,'placar-box__valor--visitante')
         checker(mandante.text,t1.text,t2.text,visitante.text,lcl.text)
 
 
@@ -178,62 +180,62 @@ for i in range(7-rod):
 
 
 if rod*4 == 28:
-    rb = m.find_element_by_class_name('navegacao-fase__seta-direita')
+    rb = m.find_element(By.CLASS_NAME,'navegacao-fase__seta-direita')
     rb.click()
     for i in range(0,2,1):
-        ul = m.find_element_by_class_name('tabela__mata-mata')
+        ul = m.find_element(By.CLASS_NAME,'tabela__mata-mata')
         lis = ul.find_elements_by_class_name('chave__jogos--1')
-        thm = lis[i].find_element_by_class_name('theme')
-        tl = thm.find_element_by_class_name('jogo__transmissao--link')
-        inf = tl.find_element_by_class_name('jogo__informacoes')
-        lcl = inf.find_element_by_class_name('jogo__informacoes--local')
-        placar = tl.find_element_by_class_name('placar')
-        mdt = placar.find_element_by_class_name('placar__equipes--mandante')
-        mandante = mdt.find_element_by_class_name("equipes__sigla").get_attribute('textContent')
-        vst = placar.find_element_by_class_name('placar__equipes--visitante')
-        visitante = vst.find_element_by_class_name('equipes__sigla').get_attribute('textContent')
-        plb = placar.find_element_by_class_name('placar-box')
-        t1 = plb.find_element_by_class_name('placar-box__valor--mandante')
-        t2 = plb.find_element_by_class_name('placar-box__valor--visitante')
+        thm = lis[i].find_element(By.CLASS_NAME,'theme')
+        tl = thm.find_element(By.CLASS_NAME,'jogo__transmissao--link')
+        inf = tl.find_element(By.CLASS_NAME,'jogo__informacoes')
+        lcl = inf.find_element(By.CLASS_NAME,'jogo__informacoes--local')
+        placar = tl.find_element(By.CLASS_NAME,'placar')
+        mdt = placar.find_element(By.CLASS_NAME,'placar__equipes--mandante')
+        mandante = mdt.find_element(By.CLASS_NAME,"equipes__sigla").get_attribute('textContent')
+        vst = placar.find_element(By.CLASS_NAME,'placar__equipes--visitante')
+        visitante = vst.find_element(By.CLASS_NAME,'equipes__sigla').get_attribute('textContent')
+        plb = placar.find_element(By.CLASS_NAME,'placar-box')
+        t1 = plb.find_element(By.CLASS_NAME,'placar-box__valor--mandante')
+        t2 = plb.find_element(By.CLASS_NAME,'placar-box__valor--visitante')
         checker(mandante,t1.text,t2.text,visitante,lcl.text)
     
     sleep(2)
     rb.click()
 
     for i in range(0,2,1):
-        ul = m.find_element_by_class_name('tabela__mata-mata')
+        ul = m.find_element(By.CLASS_NAME,'tabela__mata-mata')
         lis = ul.find_elements_by_class_name('chave__jogos--1')
-        thm = lis[i].find_element_by_class_name('theme')
-        tl = thm.find_element_by_class_name('jogo__transmissao--link')
-        inf = tl.find_element_by_class_name('jogo__informacoes')
-        lcl = inf.find_element_by_class_name('jogo__informacoes--local')
-        placar = tl.find_element_by_class_name('placar')
-        mdt = placar.find_element_by_class_name('placar__equipes--mandante')
-        mandante = mdt.find_element_by_class_name("equipes__sigla").get_attribute('textContent')
-        vst = placar.find_element_by_class_name('placar__equipes--visitante')
-        visitante = vst.find_element_by_class_name('equipes__sigla').get_attribute('textContent')
-        plb = placar.find_element_by_class_name('placar-box')
-        t1 = plb.find_element_by_class_name('placar-box__valor--mandante')
-        t2 = plb.find_element_by_class_name('placar-box__valor--visitante')
+        thm = lis[i].find_element(By.CLASS_NAME,'theme')
+        tl = thm.find_element(By.CLASS_NAME,'jogo__transmissao--link')
+        inf = tl.find_element(By.CLASS_NAME,'jogo__informacoes')
+        lcl = inf.find_element(By.CLASS_NAME,'jogo__informacoes--local')
+        placar = tl.find_element(By.CLASS_NAME,'placar')
+        mdt = placar.find_element(By.CLASS_NAME,'placar__equipes--mandante')
+        mandante = mdt.find_element(By.CLASS_NAME,"equipes__sigla").get_attribute('textContent')
+        vst = placar.find_element(By.CLASS_NAME,'placar__equipes--visitante')
+        visitante = vst.find_element(By.CLASS_NAME,'equipes__sigla').get_attribute('textContent')
+        plb = placar.find_element(By.CLASS_NAME,'placar-box')
+        t1 = plb.find_element(By.CLASS_NAME,'placar-box__valor--mandante')
+        t2 = plb.find_element(By.CLASS_NAME,'placar-box__valor--visitante')
         checker(mandante,t1.text,t2.text,visitante,lcl.text)
 
     sleep(2)
     rb.click()
 
     for i in range(0,2,1):
-        ul = m.find_element_by_class_name('tabela__mata-mata')
+        ul = m.find_element(By.CLASS_NAME,'tabela__mata-mata')
         lis = ul.find_elements_by_class_name('theme')
-        tl = lis[i].find_element_by_class_name('jogo__transmissao--link')
-        inf = tl.find_element_by_class_name('jogo__informacoes')
-        lcl = inf.find_element_by_class_name('jogo__informacoes--local')
-        placar = tl.find_element_by_class_name('placar')
-        mdt = placar.find_element_by_class_name('placar__equipes--mandante')
-        mandante = mdt.find_element_by_class_name("equipes__sigla").get_attribute('textContent')
-        vst = placar.find_element_by_class_name('placar__equipes--visitante')
-        visitante = vst.find_element_by_class_name('equipes__sigla').get_attribute('textContent')
-        plb = placar.find_element_by_class_name('placar-box')
-        t1 = plb.find_element_by_class_name('placar-box__valor--mandante')
-        t2 = plb.find_element_by_class_name('placar-box__valor--visitante')
+        tl = lis[i].find_element(By.CLASS_NAME,'jogo__transmissao--link')
+        inf = tl.find_element(By.CLASS_NAME,'jogo__informacoes')
+        lcl = inf.find_element(By.CLASS_NAME,'jogo__informacoes--local')
+        placar = tl.find_element(By.CLASS_NAME,'placar')
+        mdt = placar.find_element(By.CLASS_NAME,'placar__equipes--mandante')
+        mandante = mdt.find_element(By.CLASS_NAME,"equipes__sigla").get_attribute('textContent')
+        vst = placar.find_element(By.CLASS_NAME,'placar__equipes--visitante')
+        visitante = vst.find_element(By.CLASS_NAME,'equipes__sigla').get_attribute('textContent')
+        plb = placar.find_element(By.CLASS_NAME,'placar-box')
+        t1 = plb.find_element(By.CLASS_NAME,'placar-box__valor--mandante')
+        t2 = plb.find_element(By.CLASS_NAME,'placar-box__valor--visitante')
         checker(mandante,t1.text,t2.text,visitante,lcl.text)
 
 
@@ -251,6 +253,4 @@ browser.quit()
 
 database.to_csv('~/dtbase.csv',index=False)
 future_matches.to_csv('~/fmatches.csv',index=False)
-
-
 
