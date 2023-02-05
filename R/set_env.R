@@ -36,7 +36,7 @@ set_env = function () {
 
   reticulate::virtualenv_create(envname = paste0(path.package('soccerdatas'),'/.env'),
                                 python = NULL,
-                                version = '3.8.7',
+                                #version = '3.8.7',
                                 packages=c('numpy','pandas','selenium'),
                                 pip_options = character('python3 -m pip install --upgrade pip'))
 
