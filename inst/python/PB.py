@@ -7,6 +7,9 @@ import pandas as pd
 from webdriver_manager.firefox import GeckoDriverManager
 import os 
 import platform 
+import warnings
+
+warnings.filterwarnings('ignore')
 
 url = 'https://globoesporte.globo.com/pb/futebol/campeonato-paraibano/'
 sys = platform.system()
