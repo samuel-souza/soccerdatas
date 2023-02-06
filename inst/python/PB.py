@@ -184,7 +184,7 @@ if rod*4 == 28:
     rb.click()
     for i in range(0,2,1):
         ul = m.find_element(By.CLASS_NAME,'tabela__mata-mata')
-        lis = ul.find_elements_by_class_name('chave__jogos--1')
+        lis = ul.find_elements(By.CLASS_NAME,'chave__jogos--1')
         thm = lis[i].find_element(By.CLASS_NAME,'theme')
         tl = thm.find_element(By.CLASS_NAME,'jogo__transmissao--link')
         inf = tl.find_element(By.CLASS_NAME,'jogo__informacoes')
@@ -204,7 +204,7 @@ if rod*4 == 28:
 
     for i in range(0,2,1):
         ul = m.find_element(By.CLASS_NAME,'tabela__mata-mata')
-        lis = ul.find_elements_by_class_name('chave__jogos--1')
+        lis = ul.find_elements(By.CLASS_NAME,'chave__jogos--1')
         thm = lis[i].find_element(By.CLASS_NAME,'theme')
         tl = thm.find_element(By.CLASS_NAME,'jogo__transmissao--link')
         inf = tl.find_element(By.CLASS_NAME,'jogo__informacoes')
@@ -224,7 +224,7 @@ if rod*4 == 28:
 
     for i in range(0,2,1):
         ul = m.find_element(By.CLASS_NAME,'tabela__mata-mata')
-        lis = ul.find_elements_by_class_name('theme')
+        lis = ul.find_elements(By.CLASS_NAME,'theme')
         tl = lis[i].find_element(By.CLASS_NAME,'jogo__transmissao--link')
         inf = tl.find_element(By.CLASS_NAME,'jogo__informacoes')
         lcl = inf.find_element(By.CLASS_NAME,'jogo__informacoes--local')
