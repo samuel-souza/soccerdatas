@@ -135,7 +135,7 @@ for i in range(rod):
     sleep(0.35)
 
 for i in range(rod):
-    for j in range(4):
+    for j in range(5):
         ul = m.find_element(By.CLASS_NAME,'lista-jogos')
         lis = ul.find_elements(By.TAG_NAME,'li')
         thm = lis[j].find_element(By.CLASS_NAME,'theme')
@@ -157,8 +157,8 @@ for i in range(rod):
 
 
 
-for i in range(7-rod):
-    for j in range(4):
+for i in range(9-rod):
+    for j in range(5):
         ul = m.find_element(By.CLASS_NAME,'lista-jogos')
         lis = ul.find_elements(By.TAG_NAME,'li')
         thm = lis[j].find_element(By.CLASS_NAME,'theme')
@@ -179,7 +179,7 @@ for i in range(7-rod):
     sleep(0.3)
 
 
-if rod*4 == 28:
+if rod*4 == 36:
     rb = m.find_element(By.CLASS_NAME,'navegacao-fase__seta-direita')
     rb.click()
     for i in range(0,2,1):
